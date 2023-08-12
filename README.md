@@ -19,9 +19,9 @@ Uri uri = "content://....."
 
 _readTextContentFromUriPlugin.execute(uri).then((value) {
     if (value != null) {
-    setState(() {
-        _sharedText = value;
-    });
+        setState(() {
+            _sharedText = value;
+        });
     }
     debugPrint(value);
 });
