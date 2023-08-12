@@ -1,0 +1,34 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_sharing_intent (0.0.1):
+    - Flutter
+  - integration_test (0.0.1):
+    - Flutter
+  - read_text_content_from_uri (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_sharing_intent (from `.symlinks/plugins/flutter_sharing_intent/ios`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - read_text_content_from_uri (from `.symlinks/plugins/read_text_content_from_uri/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_sharing_intent:
+    :path: ".symlinks/plugins/flutter_sharing_intent/ios"
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  read_text_content_from_uri:
+    :path: ".symlinks/plugins/read_text_content_from_uri/ios"
+
+SPEC CHECKSUMS:
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  flutter_sharing_intent: e35380d0e1501d7111dbb7e46d5ac6339da6da98
+  integration_test: 13825b8a9334a850581300559b8839134b124670
+  read_text_content_from_uri: e35aa8728d0584d838bfda829b077ca82cd30c4e
+
+PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
+
+COCOAPODS: 1.12.1
