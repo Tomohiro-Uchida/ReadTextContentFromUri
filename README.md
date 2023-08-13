@@ -15,6 +15,7 @@ dependencies:
 ```
 import 'package:read_text_content_from_uri/read_text_content_from_uri.dart';
 
+final _readTextContentFromUriPlugin = ReadTextContentFromUri();
 Uri uri = "content://....."
 
 _readTextContentFromUriPlugin.execute(uri).then((value) {
