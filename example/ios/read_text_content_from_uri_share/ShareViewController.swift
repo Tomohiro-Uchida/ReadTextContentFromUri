@@ -16,7 +16,7 @@ import ImageIO
 @objc(ShareViewController)
 class ShareViewController: UIViewController {
         // TODO: IMPORTANT: This should be your host app bundle identifier
-        var hostAppBundleIdentifier = ""
+        var hostAppBundleIdentifier = "com.jimdo.uchida001tmhr.read_text_content_from_uri_example"
         let sharedKey = "SharingKey"
         var appGroupId = ""
         var sharedMedia: [SharingFile] = []
