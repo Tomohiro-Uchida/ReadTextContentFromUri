@@ -1,6 +1,6 @@
 name: read_text_content_from_uri
 description: Read text content specified by URI.
-version: 1.0.1
+version: 1.0.3
 
 environment:
   sdk: '>=2.18.0 <3.0.0'
