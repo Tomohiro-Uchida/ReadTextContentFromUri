@@ -14,6 +14,7 @@ import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
+import java.lang.SecurityException
 
 /** ReadTextContentFromUriPlugin */
 class ReadTextContentFromUriPlugin: FlutterPlugin, MethodCallHandler {
@@ -38,7 +39,6 @@ class ReadTextContentFromUriPlugin: FlutterPlugin, MethodCallHandler {
     if (call.method == "execute") {
       val uri = Uri.parse(call.argument("UriString"))
       try {
-        appContext.grantUriPermission("com.jimdo.uchida001tmhr.read_text_content_from_uri", uri, FLAG_GRANT_READ_URI_PERMISSION);
         inputStream = appContext.contentResolver.openInputStream(uri)
         if (inputStream != null) {
           buffer = StringBuffer()
@@ -52,11 +52,12 @@ class ReadTextContentFromUriPlugin: FlutterPlugin, MethodCallHandler {
         result.success(jsonContent)
       } catch (e: FileNotFoundException) {
         result.error("-1", "FileNotFoundException", "Couldn't open file.")
+      } catch (e: SecurityException) {
+        result.error("-3", "SecurityException", "Permission denied.")
       } catch (e: IOException) {
         result.error("-2", "IOException", "Couldn't read/write file.")
       } finally {
         inputStream?.close()
-        appContext.revokeUriPermission(uri, FLAG_GRANT_READ_URI_PERMISSION)
       }
     } else {
       result.notImplemented()

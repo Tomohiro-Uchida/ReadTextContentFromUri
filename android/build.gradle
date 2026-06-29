@@ -1,18 +1,9 @@
+plugins {
+    id "com.android.library"
+}
+
 group 'com.jimdo.uchida001tmhr.read_text_content_from_uri'
 version '1.0-SNAPSHOT'
-
-buildscript {
-    ext.kotlin_version = '2.0.20'
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.6.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
 
 allprojects {
     repositories {
@@ -21,23 +12,16 @@ allprojects {
     }
 }
 
-apply plugin: 'com.android.library'
-apply plugin: 'kotlin-android'
-
 android {
     namespace "com.jimdo.uchida001tmhr.read_text_content_from_uri"
 
-    compileSdk 35
+    compileSdk 37
 
     ndkVersion = "26.1.10909125"
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = '17'
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
 
     sourceSets {

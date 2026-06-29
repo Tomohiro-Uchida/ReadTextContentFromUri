@@ -1,3 +1,3 @@
-## 0.0.1
+# 1.0.5
+- Android 17に対応しました。
 
-* TODO: Describe initial release.
